@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrusel simplificado</title>
+    <style type="text/css">
+	* {
+	  margin: 0;
+	  padding: 0;
+	  box-sizing: border-box;
+	}
+
+	body {
+	  background: #ffffff;
+	}
+
+	@keyframes slide {
+	  from {
+	    transform: translateX(0);
+	  }
+	  to {
+	    transform: translateX(-100%);
+	  }
+	}
+
+	.logos {
+	  overflow: hidden;
+	  padding: 5px 0;
+	  white-space: nowrap;
+	  position: relative;
+	}
+
+	.logos:before,
+	.logos:after {
+	  position: absolute;
+	  top: 0;
+	  width: 80px;
+	  height: 100%;
+	  content: "";
+	  z-index: 2;
+	}
+
+	.logos:before {
+	  left: 0;
+	  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+	}
+
+	.logos:after {
+	  right: 0;
+	  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+	}
+
+	.logos:hover .logos-slide {
+	  animation-play-state: paused;
+	  filter: grayscale(0);
+	}
+
+	.logos-slide {
+	  display: inline-block;
+	  animation: 40s slide infinite linear;
+	}
+
+	.logos-slide img {
+	  height: 180px;
+	  margin: 0 20px;
+	  transition: filter 0.5s ease-in-out;
+	}
+
+	.logos-slide img:hover{
+ 	 filter: grayscale(1);
+	}
+
+	
+	
+    </style> 
+  </head>
+  <body>
+    <div class="logos">
+		<div class="logos-slide">
+		  <a href="https://www.amazonprod.com" target="_blank"><img src="https://github.com/Tlacayaotzin/Congreso/blob/main/Amazon_Logo-1.jpg?raw=true" /></a>
+		  <a href="https://www.normich.com.mx" target="_blank"><img src="https://github.com/Tlacayaotzin/Congreso/blob/main/NORMICH.png?raw=true" /></a>
+		  <a href="https://arizlu.com" target="_blank"><img src="https://github.com/Tlacayaotzin/Congreso/blob/main/patrocinador-oro-arizlu.jpg?raw=true" /></a>
+		  <a href="https://www.mango.org/es/" target="_blank"><img src="https://github.com/Tlacayaotzin/Congreso/blob/main/patrocinador-oro-mango.jpg?raw=true" /></a>
+		  <a href="https://pamfa.com.mx" target="_blank"><img src="https://github.com/Tlacayaotzin/Congreso/blob/main/patrocinador-oro-pamfa.jpg?raw=true" /></a>
+		  <a href="https://mexqualitybox.com" target="_blank"><img src="https://github.com/Tlacayaotzin/Congreso/blob/main/patrocinador-oro-quality.jpg?raw=true" /></a>
+		  <a href="https://www.rcfdistributors.com" target="_blank"><img src="https://github.com/Tlacayaotzin/Congreso/blob/main/patrocinador-oro-rcf.jpg?raw=true" /></a>
+		  <a href="https://www.syngenta.com.mx" target="_blank"><img src="https://github.com/Tlacayaotzin/Congreso/blob/main/patrocinador-oro-syngenta.jpg?raw=true" /></a>
+		  <a href="https://vanplastic.mx" target="_blank"><img src="https://github.com/Tlacayaotzin/Congreso/blob/main/patrocinador-oro-vanpalstic.jpg?raw=true" /></a>
+		  <a href="https://www.crespoorganic.com" target="_blank"><img src="https://raw.githubusercontent.com/Tlacayaotzin/Congreso/main/patrocinador-oro-crespo.webp" /></a>
+		</div>
+		<div class="logos-slide">
+		  <a href="https://www.amazonprod.com" target="_blank"><img src="https://github.com/Tlacayaotzin/Congreso/blob/main/Amazon_Logo-1.jpg?raw=true" /></a>
+		  <a href="https://www.normich.com.mx" target="_blank"><img src="https://github.com/Tlacayaotzin/Congreso/blob/main/NORMICH.png?raw=true" /></a>
+		  <a href="https://arizlu.com" target="_blank"><img src="https://github.com/Tlacayaotzin/Congreso/blob/main/patrocinador-oro-arizlu.jpg?raw=true" /></a>
+		  <a href="https://www.mango.org/es/" target="_blank"><img src="https://github.com/Tlacayaotzin/Congreso/blob/main/patrocinador-oro-mango.jpg?raw=true" /></a>
+		  <a href="https://pamfa.com.mx" target="_blank"><img src="https://github.com/Tlacayaotzin/Congreso/blob/main/patrocinador-oro-pamfa.jpg?raw=true" /></a>
+		  <a href="https://mexqualitybox.com" target="_blank"><img src="https://github.com/Tlacayaotzin/Congreso/blob/main/patrocinador-oro-quality.jpg?raw=true" /></a>
+		  <a href="https://www.rcfdistributors.com" target="_blank"><img src="https://github.com/Tlacayaotzin/Congreso/blob/main/patrocinador-oro-rcf.jpg?raw=true" /></a>
+		  <a href="https://www.syngenta.com.mx" target="_blank"><img src="https://github.com/Tlacayaotzin/Congreso/blob/main/patrocinador-oro-syngenta.jpg?raw=true" /></a>
+		  <a href="https://vanplastic.mx" target="_blank"><img src="https://github.com/Tlacayaotzin/Congreso/blob/main/patrocinador-oro-vanpalstic.jpg?raw=true" /></a>
+		  <a href="https://www.crespoorganic.com" target="_blank"><img src="https://raw.githubusercontent.com/Tlacayaotzin/Congreso/main/patrocinador-oro-crespo.webp" /></a>
+		</div>
+
+    </div>
+  </body>
+</html>
